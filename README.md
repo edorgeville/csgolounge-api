@@ -12,7 +12,6 @@ lounge.getMatches(function(matches){
     console.log(matches);
 });
 
-// Not implemented yet
 lounge.getMatch(matchId, function(match){
     console.log(match);
 });

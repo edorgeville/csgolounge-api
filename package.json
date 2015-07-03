@@ -1,8 +1,8 @@
 {
   "name": "csgolounge-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A NodeJS API for csgolounge.com",
-  "main": "index.js",
+  "main": "lounge.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
