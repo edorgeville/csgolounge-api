@@ -1,6 +1,6 @@
 {
   "name": "csgolounge-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A NodeJS API for csgolounge.com",
   "main": "lounge.js",
   "scripts": {
