@@ -68,8 +68,14 @@ lounge.getMatches = function(callback){
 						case 'hours from now': case 'hour from now':
 							timestamp += test[0] * 3600;
 						break;
+						case 'days ago': case 'day ago':
+							timestamp -= test[0] * 86400;
+						break;
+						case 'days from now': case 'day from now':
+							timestamp += test[0] * 86400;
+						break;
 						default:
-							lounge.log('L66 - time not found:',check[1]);
+							lounge.log('time not found:', time);
 					}
 					
 					lounge.matches.push({
