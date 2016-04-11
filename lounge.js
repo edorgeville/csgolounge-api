@@ -43,6 +43,7 @@ lounge.getMatches = function(callback){
 					var matchLogo= $(this).find('.match').css()['background-image'];
 					var teamLogo1 = $team1.parent().parent().find('.team').css()['background'];
 					var teamLogo2 = $team2.parent().parent().find('.team').css()['background'];
+					matchLogo = matchLogo.substr(1, matchLogo.length-1);
 					
 					
 					var timestamp = Math.round((new Date()).getTime() / 1000),
