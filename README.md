@@ -1,7 +1,7 @@
 # CSGO Lounge API
 ## A NodeJS API for [csgolounge.com](http://csgolounge.com)
 
-[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)](https://www.npmjs.com/package/csgolounge-api)
+[![npm](https://img.shields.io/npm/v/csgolounge-api.svg?maxAge=2592000)](https://www.npmjs.com/package/csgolounge-api)
 
 ### How to install
 ```npm install --save csgolounge-api```  
