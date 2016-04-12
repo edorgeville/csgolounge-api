@@ -12,11 +12,8 @@ lounge.getMatches = function(callback){
 		}
 	} else{
 		request(lounge.url, function(error, response, html){
-
 			if(!error){
-
 				lounge.matches = [];
-
 				var $ = cheerio.load(html);
 
 				$('#bets > .matchmain').each(function(i, elem) {
@@ -42,8 +39,12 @@ lounge.getMatches = function(callback){
 					var matchType = parseInt($(this).find('.match').find('.format').text().substr(2));
 					var teamLogo1 = $team1.parent().parent().find('.team').css()['background'];
 					var teamLogo2 = $team2.parent().parent().find('.team').css()['background'];
+					var winner = 0;
 					var matchLogo= $(this).find('.match').css()['background-image'];
 					matchLogo = matchLogo.substr(1, matchLogo.length-2);
+					
+					if ( $teams.first().find('.team img').length > 0 ) winner = 1;
+					else if ( $teams.last().find('.team img').length > 0 ) winner = 2;
 					
 					var timestamp = Math.round((new Date()).getTime() / 1000),
 						test = time.split(' '),
@@ -81,6 +82,7 @@ lounge.getMatches = function(callback){
 					lounge.matches.push({
 						id: id,
 						time: time,
+						winner: winner,
 						timestamp: timestamp,
 						type: matchType,
 						matchLogo: matchLogo.substr(4, matchLogo.length-5),
