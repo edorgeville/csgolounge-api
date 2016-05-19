@@ -16,7 +16,7 @@ lounge.getMatches = function(callback){
 				lounge.matches = [];
 				var $ = cheerio.load(html);
 
-				$('#bets > .matchmain').each(function(i, elem) {
+				$('#bets > .matchmain').has(".matchleft").each(function(i, elem) {
 					var time = $(this).find('.matchheader').find('.whenm').contents().first().text();
 
 					var $teams = $(this).find('.team').first().parent().parent().children();
